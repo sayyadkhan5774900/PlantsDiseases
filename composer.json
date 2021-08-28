@@ -17,10 +17,15 @@
         "laravel/dusk": "^6.11",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "yajra/laravel-datatables-oracle": "^9.11",
         "laravel/ui": "^3.3",
+<<<<<<< Updated upstream
         "laraveldaily/laravel-charts": "^0.1.24",
         "spatie/laravel-medialibrary": "^8.7"
+=======
+        "spatie/laravel-medialibrary": "^8.7",
+        "vajiral/php-image-compare": "^1.0",
+        "yajra/laravel-datatables-oracle": "^9.11"
+>>>>>>> Stashed changes
     },
     "require-dev": {
         "facade/ignition": "^2.5",

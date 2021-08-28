@@ -1,6 +1,27 @@
 <?php
 
-Route::redirect('/', '/login');
+use App\Models\Disease;
+
+
+use BigV\ImageCompare;
+
+require __DIR__ . "/../vendor/autoload.php";
+
+Route::get('/', function () {
+
+    $diseases = Disease::all();
+    $disease = Disease::find(1);
+
+    foreach($disease->images as $key => $media){
+        $image = new ImageCompare();
+        echo $image->compare($media->getUrl('thumb'),$media->getUrl('thumb'));        
+    }
+
+    return view('welcome',compact('diseases'));
+});
+
+// Route::redirect('/', '/login');
+
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
